@@ -1,0 +1,8 @@
+on: push
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: python hello_world_printer.py

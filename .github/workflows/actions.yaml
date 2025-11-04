@@ -1,8 +1,14 @@
+name: GitHub automated actions
 on: push
 
 jobs:
   hello_world:
+    name: Printer workflow
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - run: python hello_world_printer.py
+      - name: Read repository content
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: python hello_world_printer.py
